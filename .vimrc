@@ -60,21 +60,3 @@ au BufNewFile,BufRead *.json
             \ set shiftwidth=2 |
             \ set autoindent
 
-
-
-" Specify a directory for plugins
-" - Avoid using standard Vim directory names like 'plugin'
-call plug#begin('~/.vim/plugged')
-"Plug 'nvie/vim-flake8'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'leafgarland/typescript-vim'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'vim-scripts/c.vim'
-Plug 'sudar/vim-arduino-syntax'
-"Plug 'tpope/vim-sleuth'
-
-" Initialize plugin system
-call plug#end()
-let g:javascript_plugin_jsdoc = 1
-let g:jsx_ext_required = 1
