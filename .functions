@@ -1,0 +1,9 @@
+# Create a new directory and enter it
+function mkd() {
+  mkdir -p "$@" && cd "$@";
+}
+
+# Easy to view csv
+function view_csv {
+  perl -pe 's/((?<=,)|(?<=^)),/ ,/g;' "$@" | column -t -s, | less  -F -S -X -K
+}
