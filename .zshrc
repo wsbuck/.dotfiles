@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/wsbuck/.oh-my-zsh"
+export ZSH="/Users/william/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -13,6 +13,11 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator virtualenv ram)
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_VCS_SHORTEN_LENGTH=6
+POWERLEVEL9K_VCS_SHORTEN_MIN_LENGTH=20
+POWERLEVEL9K_VCS_SHORTEN_STRATEGY="truncate_from_right"
+POWERLEVEL9K_VCS_SHORTEN_DELIMITER=""
+POWERLEVEL9K_VCS_HIDE_TAGS=true
 POWERLEVEL9K_MODE='nerdfont-complete'
 
 # Set list of themes to pick from when loading at random
@@ -128,3 +133,9 @@ export NVM_DIR="$HOME/.nvm"
 export NEXT_TELEMETRY_DISABLED=1;
 
 . ~/.functions
+
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
