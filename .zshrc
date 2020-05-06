@@ -9,7 +9,7 @@ export ZSH="/Users/william/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator virtualenv ram)
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
@@ -139,3 +139,22 @@ export NEXT_TELEMETRY_DISABLED=1;
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+export PATH="$PATH:/opt/yarn-[version]/bin"
+
+alias tem='node -r esm -r ts-node/register'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/william/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/william/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/william/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/william/google-cloud-sdk/completion.zsh.inc'; fi
+
+# PYENV
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
